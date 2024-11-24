@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Order Your Smoothie</h1>
+
+        <form id="smoothieForm">
+            <div class="form-group">
+                <label for="smoothieSize">Smoothie Size:</label>
+                <select id="smoothieSize" name="size" required>
+                    <option value="">Select size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="smoothieFlavor">Flavor:</label>
+                <select id="smoothieFlavor" name="flavor" required>
+                    <option value="">Select flavor</option>
+                    <option value="banana">Banana</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="mango">Mango</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="smoothieExtras">Extras:</label>
+                <label><input type="checkbox" name="extras" value="protein"> Protein</label>
+                <label><input type="checkbox" name="extras" value="spinach"> Spinach</label>
+                <label><input type="checkbox" name="extras" value="almondMilk"> Almond Milk</label>
+            </div>
+
+            <div class="form-group">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" name="name" required>
+            </div>
+
+            <button type="submit">Order Smoothie</button>
+        </form>
+
+        <!-- Order Summary Section -->
+        <div id="orderSummary" class="order-summary hide">
+            <h2>Order Summary</h2>
+            <p id="orderDetails"></p>
+            <p id="orderPrice"></p>
+            <p id="customerNameSummary"></p>
+            <div id="smoothieImageWrapper">
+                <img src="" alt="Smoothie Image" id="smoothieImage">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

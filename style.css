@@ -1,0 +1,186 @@
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f9f9f9, #e0f7fa);
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Styling form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Input and select fields */
+input, select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+}
+
+/* Checkboxes styled inline */
+.form-group label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit button */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Order Summary section styling */
+.order-summary {
+    margin-top: 30px;
+    padding: 30px;
+    border-top: 2px solid #ddd;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.order-summary.hide {
+    display: none;
+}
+
+.order-summary h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+#smoothieImageWrapper {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#smoothieImage {
+    width: 100%;
+    height: auto;
+}
+
+/* Order summary text styling */
+#orderDetails, #orderPrice, #customerNameSummary {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#orderPrice {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #4CAF50;
+}
+
+/* Adding stylish effect to form labels */
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Stylish input field focus effect */
+input, select {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, select:focus {
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Add spacing between checkboxes */
+.form-group label {
+    margin-bottom: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .order-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #smoothieImageWrapper {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
